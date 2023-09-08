@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color= "tertiary">
+    <ion-title color="light">
+      <h3 class="titulo_app">TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
+    </ion-title>
+    <ion-buttons slot="start" >
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-card-header>
+      <ion-title size="large" id="titulo"></ion-title>
+    </ion-card-header>
+  </ion-header>
+
+  <div id="container">
+    <ion-card>
+      <ion-card-header>
+        <br>
+        <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+        <h1>
+          </h1><br>
+        <p>Comienza tu viaje!</p>
+        <ion-card-title>TellevoApp</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input [(ngModel)]="user.usuario" label="Nombre de Usuario" labelPlacement="floating"
+              placeholder="Ingrese su Usuario"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input [(ngModel)]="user.password" label="Contraseña" type="password" labelPlacement="floating"
+              placeholder="Ingrese contraseña"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-toggle aria-label="Success toggle" color="success" [checked]="true">Recuerdame</ion-toggle>
+          </ion-item><br>
+          <ion-button (click)="enviarInformacion()" size="small" shape="round">Ingresar</ion-button><br>
+          <p><a>Crea tu cuenta gratis</a></p>          
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title color="light">
+      <h3 class="titulo_app">TeLlevoApp<ion-icon name="car-sport-sharp"></ion-icon></h3>
+    </ion-title>
+    <ion-buttons slot="start" >
+      <ion-menu-button color="dark"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="cuerpo">
+<div class="texttitle">
+  <h3> Bienvenido  <ion-icon name="accessibility-sharp"></ion-icon></h3>
+</div>
+  <ion-menu side="start" menuId="custom" contentId="main" class="my-custom-menu">
+    <ion-header>
+      <ion-toolbar color= "tertiary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        
+        <ion-item [routerLink] ="['/inicio']">
+          <ion-icon name="enter-sharp"></ion-icon>
+          Cierre de sesion
+        </ion-item>
+        <ion-item [routerLink] ="['/listausuarios']">
+          <ion-icon name="car-sport-sharp"></ion-icon>
+          vehiculos
+        </ion-item>
+        <ion-item [routerLink] = "['/contactos']">
+          <ion-icon name="call-sharp"></ion-icon>   
+          Contactos
+        </ion-item>
+        <ion-item [routerLink] = "['/ayuda']">
+          <ion-icon name="information-circle-sharp"></ion-icon>  
+          Ayuda
+        </ion-item>
+       
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet id="main"></ion-router-outlet>
